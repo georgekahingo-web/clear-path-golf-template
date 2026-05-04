@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bogey Be Gone Mobile — The premier portable golf simulator experience delivered to your event. Corporate events, private parties, weddings, and more.">
+  <meta property="og:title" content="BBG | Bogey Be Gone Mobile">
+  <meta property="og:description" content="The premier portable golf simulator experience delivered to your event. Corporate events, private parties, weddings, and more.">
+  <meta property="og:image" content="assets/images/og-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-vercel-url.vercel.app">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BBG | Bogey Be Gone Mobile">
+  <meta name="twitter:description" content="The premier portable golf simulator experience delivered to your event.">
+  <meta name="twitter:image" content="assets/images/og-preview.jpg">
+  <title>BBG | Bogey Be Gone Mobile</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" id="site-header" role="banner">
+    <div class="header-inner">
+      <a href="#hero" class="logo" aria-label="Bogey Be Gone Mobile home">
+        <svg class="logo__icon" width="28" height="38" viewBox="0 0 28 38" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="4" y="2" width="2" height="32" rx="1" fill="#e8c96b"/>
+          <path d="M6 5 L23 10 L6 16 Z" fill="#e8c96b"/>
+          <ellipse cx="5" cy="35" rx="7" ry="2.4" fill="rgba(245,240,232,0.15)"/>
+        </svg>
+        <span class="logo__copy">
+          <span class="logo__title">BOGEY BE GONE</span>
+          <span class="logo__subtitle">Mobile</span>
+        </span>
+        <span class="logo__mobile-mark">BBG</span>
+      </a>
+
+      <nav class="nav nav--desktop" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#booking" class="btn btn--header">Book Now</a>
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <svg class="menu-toggle__icon" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path class="menu-toggle__line menu-toggle__line--1" d="M2 5.5h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path class="menu-toggle__line menu-toggle__line--2" d="M2 11h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path class="menu-toggle__line menu-toggle__line--3" d="M2 16.5h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation" hidden>
+    <nav class="nav nav--mobile" aria-label="Mobile primary">
+      <ul class="nav__list nav__list--mobile">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#booking" class="btn btn--mobile-cta">Book Now</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="hero__bg" aria-hidden="true">
+        <video class="hero__video" autoplay loop muted playsinline>
+          <source src="assets/videos/hero-video.mp4" type="video/mp4">
+        </video>
+        <div class="hero__video-overlay"></div>
+        <div class="hero__orb hero__orb--1"></div>
+        <div class="hero__orb hero__orb--2"></div>
+        <div class="hero__orb hero__orb--3"></div>
+        <svg class="hero__flag" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M200 40 L360 100 L200 160 Z" fill="var(--color-green)" opacity="0.12"/>
+          <rect x="196" y="40" width="8" height="520" rx="2" fill="var(--color-gold)" opacity="0.2"/>
+        </svg>
+      </div>
+      <div class="hero__content container">
+        <p class="hero__eyebrow" data-reveal>THE PREMIER MOBILE GOLF SIMULATOR</p>
+        <h1 class="hero__title" id="hero-heading" data-reveal>
+          <span class="hero__title-line">Bring the Course</span>
+          <span class="hero__title-line">To Your Event.</span>
+        </h1>
+        <p class="hero__sub" data-reveal>A fully self-contained, professional simulator experience — delivered to your venue with white-glove setup and support.</p>
+        <div class="hero__ctas" data-reveal>
+          <a href="#booking" class="btn btn--primary">Reserve Your Experience</a>
+          <a href="#services" class="btn btn--outline">See Our Packages</a>
+        </div>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll to about section">
+        <span class="hero__scroll-text">Explore</span>
+        <svg class="hero__scroll-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </section>
+
+    <!-- CTA after hero -->
+    <section class="section-cta section-cta--compact" aria-label="Book your experience">
+      <div class="container section-cta__inner" data-reveal>
+        <p class="section-cta__label">Planning an event?</p>
+        <a href="#booking" class="btn btn--primary">Book Now</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about section" id="about" aria-labelledby="about-heading">
+      <div class="container about__grid">
+        <blockquote class="about__quote" data-reveal>
+          <p>We don’t just bring a screen — we bring the atmosphere of a private club to your celebration.</p>
+        </blockquote>
+        <div class="about__copy">
+          <h2 class="section__title" id="about-heading" data-reveal>What We Do</h2>
+          <p class="about__text" data-reveal>Clearpath Golf delivers a premium portable simulator to corporate gatherings, weddings, fundraisers, and private parties nationwide. Our team handles delivery, calibration, and on-site hosting so you can focus on your guests.</p>
+          <div class="about__stats" data-reveal>
+            <div class="stat">
+              <span class="stat__value">200+</span>
+              <span class="stat__label">Events Hosted</span>
+            </div>
+            <div class="stat">
+              <span class="stat__value">5★</span>
+              <span class="stat__label">Client Rated</span>
+            </div>
+            <div class="stat">
+              <span class="stat__value">Any</span>
+              <span class="stat__label">Venue Type</span>
+            </div>
+          </div>
+          <div class="about__cta" data-reveal>
+            <a href="#booking" class="btn btn--primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services section" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <h2 class="section__title section__title--center" id="services-heading" data-reveal>Services &amp; Packages</h2>
+        <p class="section__lead section__lead--center" data-reveal>Tailored experiences for every kind of gathering — from boardrooms to ballrooms.</p>
+        <div class="services__grid">
+          <article class="service-card" data-reveal>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 26V10l10-6 10 6v16l-10 6-10-6z" stroke="currentColor" stroke-width="1.5"/><path d="M16 4v24M6 10l10 6 10-6" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <h3 class="service-card__title">Corporate Events</h3>
+            <p class="service-card__desc">Impress clients and teams with a refined activations lounge and branded leaderboard options.</p>
+            <a href="#booking" class="service-card__link">Book This</a>
+          </article>
+          <article class="service-card" data-reveal>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 4c-4 6-8 10-8 16a8 8 0 1016 0c0-6-4-10-8-16z" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <h3 class="service-card__title">Private Parties &amp; Celebrations</h3>
+            <p class="service-card__desc">Birthdays, anniversaries, and milestone moments with concierge setup and optional coaching.</p>
+            <a href="#booking" class="service-card__link">Book This</a>
+          </article>
+          <article class="service-card" data-reveal>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 28l-12-8V8l12-4 12 4v12l-12 8z" stroke="currentColor" stroke-width="1.5"/><path d="M8 12l8 4 8-4" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <h3 class="service-card__title">Weddings</h3>
+            <p class="service-card__desc">A memorable cocktail-hour experience that keeps every generation engaged.</p>
+            <a href="#booking" class="service-card__link">Book This</a>
+          </article>
+          <article class="service-card" data-reveal>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="1.5"/><path d="M16 8v16M10 14h12" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <h3 class="service-card__title">Charity &amp; Golf Tournaments</h3>
+            <p class="service-card__desc">Drive donations and engagement with sponsor-friendly sim stations and tournament formats.</p>
+            <a href="#booking" class="service-card__link">Book This</a>
+          </article>
+          <article class="service-card" data-reveal>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="8" width="20" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M10 14h12M10 18h8" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <h3 class="service-card__title">Birthday Parties</h3>
+            <p class="service-card__desc">Fun, competitive play for all skill levels — perfect for kids, teens, and adults.</p>
+            <a href="#booking" class="service-card__link">Book This</a>
+          </article>
+          <article class="service-card" data-reveal>
+            <div class="service-card__icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 22l8-12 8 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <h3 class="service-card__title">Team Building</h3>
+            <p class="service-card__desc">Structured challenges and scramble formats designed to spark collaboration.</p>
+            <a href="#booking" class="service-card__link">Book This</a>
+          </article>
+        </div>
+      </div>
+      <div class="services__cta-strip" data-reveal>
+        <div class="container services__cta-inner">
+          <h3 class="services__cta-title">Ready to Book?</h3>
+          <p class="services__cta-text">Lock your date and we’ll tailor the experience to your venue.</p>
+          <a href="#booking" class="btn btn--primary btn--large">Reserve Your Experience</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="how section" id="how-it-works" aria-labelledby="how-heading">
+      <div class="container">
+        <h2 class="section__title section__title--center" id="how-heading" data-reveal>How It Works</h2>
+        <p class="section__lead section__lead--center" data-reveal>Three simple steps from inquiry to first tee.</p>
+        <ol class="how__steps">
+          <li class="how__step" data-reveal>
+            <span class="how__num">01</span>
+            <h3 class="how__step-title">Book</h3>
+            <p class="how__step-desc">Share your event details — we confirm availability and craft a custom quote.</p>
+          </li>
+          <li class="how__step how__step--connector" data-reveal>
+            <span class="how__num">02</span>
+            <h3 class="how__step-title">We Set Up</h3>
+            <p class="how__step-desc">Our crew arrives early, installs the bay, calibrates tracking, and runs a full systems check.</p>
+          </li>
+          <li class="how__step" data-reveal>
+            <span class="how__num">03</span>
+            <h3 class="how__step-title">You Play</h3>
+            <p class="how__step-desc">Step in, swing away, and enjoy — with optional hosting and contests for your group.</p>
+          </li>
+        </ol>
+        <div class="how__cta-wrap" data-reveal>
+          <a href="#booking" class="btn btn--primary">Book Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery section" id="gallery" aria-labelledby="gallery-heading">
+      <div class="container">
+        <h2 class="section__title section__title--center" id="gallery-heading" data-reveal>The Experience</h2>
+        <p class="section__lead section__lead--center" data-reveal>A glimpse of our simulators in action — photography coming soon.</p>
+      </div>
+      <div class="gallery__grid" role="list">
+        <div class="gallery__item gallery__item--tall" role="listitem" data-reveal>
+          <span class="gallery__label">Corporate Event</span>
+        </div>
+        <div class="gallery__item" role="listitem" data-reveal>
+          <span class="gallery__label">Private Party</span>
+        </div>
+        <div class="gallery__item gallery__item--wide" role="listitem" data-reveal>
+          <span class="gallery__label">Wedding Reception</span>
+        </div>
+        <div class="gallery__item" role="listitem" data-reveal>
+          <span class="gallery__label">Charity Tournament</span>
+        </div>
+        <div class="gallery__item" role="listitem" data-reveal>
+          <span class="gallery__label">Team Building</span>
+        </div>
+        <div class="gallery__item gallery__item--accent" role="listitem" data-reveal>
+          <span class="gallery__label">Evening Soirée</span>
+        </div>
+      </div>
+      <div class="gallery__cta-wrap container" data-reveal>
+        <a href="#booking" class="btn btn--primary">Reserve Your Experience</a>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials section" id="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <h2 class="section__title section__title--center" id="testimonials-heading" data-reveal>What Clients Say</h2>
+        <div class="testimonials__track" role="list">
+          <article class="testimonial-card" role="listitem" data-reveal>
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path d="M9 1.5l2.35 4.76 5.26.77-3.8 3.7.9 5.24L9 13.77 4.29 15.97l.9-5.24-3.8-3.7 5.26-.77L9 1.5z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path d="M9 1.5l2.35 4.76 5.26.77-3.8 3.7.9 5.24L9 13.77 4.29 15.97l.9-5.24-3.8-3.7 5.26-.77L9 1.5z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path d="M9 1.5l2.35 4.76 5.26.77-3.8 3.7.9 5.24L9 13.77 4.29 15.97l.9-5.24-3.8-3.7 5.26-.77L9 1.5z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path d="M9 1.5l2.35 4.76 5.26.77-3.8 3.7.9 5.24L9 13.77 4.29 15.97l.9-5.24-3.8-3.7 5.26-.77L9 1.5z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path d="M9 1.5l2.35 4.76 5.26.77-3.8 3.7.9 5.24L9 13.77 4.29 15.97l.9-5.24-3.8-3.7 5.26-.77L9 1.5z"/></svg>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              <p>“Our sales summit had a line at the simulator all night. Setup was invisible — they just made it happen.”</p>
+            </blockquote>
+            <footer class="testimonial-card__meta">
+              <cite class="testimonial-card__name">Jordan Ellis</cite>
+              <span class="testimonial-card__role">VP Marketing, Corporate Retreat</span>
+            </footer>
+          </article>
+          <article class="testimonial-card" role="listitem" data-reveal>
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path d="M9 1.5l2.35 4.76 5.26.77-3.8 3.7.9 5.24L9 13.77 4.29 15.97l.9-5.24-3.8-3.7 5.26-.77L9 1.5z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path d="M9 1.5l2.35 4.76 5.26.77-3.8 3.7.9 5.24L9 13.77 4.29 15.97l.9-5.24-3.8-3.7 5.26-.77L9 1.5z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path d="M9 1.5l2.35 4.76 5.26.77-3.8 3.7.9 5.24L9 13.77 4.29 15.97l.9-5.24-3.8-3.7 5.26-.77L9 1.5z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path d="M9 1.5l2.35 4.76 5.26.77-3.8 3.7.9 5.24L9 13.77 4.29 15.97l.9-5.24-3.8-3.7 5.26-.77L9 1.5z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path d="M9 1.5l2.35 4.76 5.26.77-3.8 3.7.9 5.24L9 13.77 4.29 15.97l.9-5.24-3.8-3.7 5.26-.77L9 1.5z"/></svg>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              <p>“The wedding guests are still talking about it. Felt like a five-star club popped up in our tent.”</p>
+            </blockquote>
+            <footer class="testimonial-card__meta">
+              <cite class="testimonial-card__name">Alex &amp; Morgan Reed</cite>
+              <span class="testimonial-card__role">Outdoor Wedding</span>
+            </footer>
+          </article>
+          <article class="testimonial-card" role="listitem" data-reveal>
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path d="M9 1.5l2.35 4.76 5.26.77-3.8 3.7.9 5.24L9 13.77 4.29 15.97l.9-5.24-3.8-3.7 5.26-.77L9 1.5z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path d="M9 1.5l2.35 4.76 5.26.77-3.8 3.7.9 5.24L9 13.77 4.29 15.97l.9-5.24-3.8-3.7 5.26-.77L9 1.5z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path d="M9 1.5l2.35 4.76 5.26.77-3.8 3.7.9 5.24L9 13.77 4.29 15.97l.9-5.24-3.8-3.7 5.26-.77L9 1.5z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path d="M9 1.5l2.35 4.76 5.26.77-3.8 3.7.9 5.24L9 13.77 4.29 15.97l.9-5.24-3.8-3.7 5.26-.77L9 1.5z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path d="M9 1.5l2.35 4.76 5.26.77-3.8 3.7.9 5.24L9 13.77 4.29 15.97l.9-5.24-3.8-3.7 5.26-.77L9 1.5z"/></svg>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              <p>“Fundraising night crushed goals. The sim was the magnet that kept donors in the room.”</p>
+            </blockquote>
+            <footer class="testimonial-card__meta">
+              <cite class="testimonial-card__name">Priya Shah</cite>
+              <span class="testimonial-card__role">Charity Tournament Director</span>
+            </footer>
+          </article>
+        </div>
+        <div class="testimonials__cta" data-reveal>
+          <a href="#booking" class="btn btn--outline-gold">Reserve Your Experience</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq section" id="faq" aria-labelledby="faq-heading">
+      <div class="container container--narrow">
+        <h2 class="section__title section__title--center" id="faq-heading" data-reveal>Frequently Asked Questions</h2>
+        <div class="faq__list" role="list">
+          <div class="faq__item" data-reveal>
+            <button type="button" class="faq__question" id="faq-btn-1" aria-expanded="false" aria-controls="faq-panel-1">
+              <span>What space and power do you need for setup?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__panel" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1" aria-hidden="true">
+              <div class="faq__answer">
+                <p>We typically need a flat 10×12 ft area with at least 9 ft ceiling clearance, plus a dedicated 15–20 amp circuit within 50 ft. Outdoor setups use weather-rated enclosures — we’ll confirm site specifics during booking.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__item" data-reveal>
+            <button type="button" class="faq__question" id="faq-btn-2" aria-expanded="false" aria-controls="faq-panel-2">
+              <span>What types of events do you support?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__panel" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2" aria-hidden="true">
+              <div class="faq__answer">
+                <p>Corporate events, weddings, private parties, birthdays, charity tournaments, team building, and sporting-event activations. If you have guests and open floor space, we can usually make it work.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__item" data-reveal>
+            <button type="button" class="faq__question" id="faq-btn-3" aria-expanded="false" aria-controls="faq-panel-3">
+              <span>How far in advance should we book?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__panel" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3" aria-hidden="true">
+              <div class="faq__answer">
+                <p>Peak weekends fill 6–10 weeks out. We recommend reaching out as soon as you have a date; rush availability can sometimes be accommodated for local events.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__item" data-reveal>
+            <button type="button" class="faq__question" id="faq-btn-4" aria-expanded="false" aria-controls="faq-panel-4">
+              <span>How does pricing work?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__panel" id="faq-panel-4" role="region" aria-labelledby="faq-btn-4" aria-hidden="true">
+              <div class="faq__answer">
+                <p>Pricing depends on duration, travel, add-ons (branding, contests, extra bays), and day of week. Submit the form for a tailored quote — no obligation.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__item" data-reveal>
+            <button type="button" class="faq__question" id="faq-btn-5" aria-expanded="false" aria-controls="faq-panel-5">
+              <span>Can you set up indoors and outdoors?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__panel" id="faq-panel-5" role="region" aria-labelledby="faq-btn-5" aria-hidden="true">
+              <div class="faq__answer">
+                <p>Yes. Ballrooms, offices, warehouses, tents, and patios are all common. We assess weather, flooring, and lighting for outdoor installs to protect equipment and guests.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__item" data-reveal>
+            <button type="button" class="faq__question" id="faq-btn-6" aria-expanded="false" aria-controls="faq-panel-6">
+              <span>Do you provide staff during the event?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__panel" id="faq-panel-6" role="region" aria-labelledby="faq-btn-6" aria-hidden="true">
+              <div class="faq__answer">
+                <p>A technician stays on-site for premium packages to manage the bay, coach beginners, and run contests. Lite packages may include setup and strike with remote support.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__item" data-reveal>
+            <button type="button" class="faq__question" id="faq-btn-7" aria-expanded="false" aria-controls="faq-panel-7">
+              <span>Is the simulator beginner-friendly?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__panel" id="faq-panel-7" role="region" aria-labelledby="faq-btn-7" aria-hidden="true">
+              <div class="faq__answer">
+                <p>Absolutely. We adjust tee height, game mode, and difficulty so first-timers and scratch golfers all have fun. Optional quick lessons help everyone get comfortable fast.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__item" data-reveal>
+            <button type="button" class="faq__question" id="faq-btn-8" aria-expanded="false" aria-controls="faq-panel-8">
+              <span>What is your service area?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__panel" id="faq-panel-8" role="region" aria-labelledby="faq-btn-8" aria-hidden="true">
+              <div class="faq__answer">
+                <p>We operate regionally with travel available for multi-day or high-profile events. Share your venue city in the form and we’ll confirm logistics and travel fees.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="faq__cta" data-reveal>
+          <a href="#booking" class="btn btn--outline-gold">Book Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking -->
+    <section class="booking section" id="booking" aria-labelledby="booking-heading">
+      <div class="booking__bg" aria-hidden="true"></div>
+      <div class="container booking__inner">
+        <div class="booking__intro" data-reveal>
+          <h2 class="booking__title" id="booking-heading">Reserve Your Experience</h2>
+          <p class="booking__sub">Tell us about your event — we’ll reply within one business day with availability and next steps.</p>
+        </div>
+
+        <div class="booking__form-wrap" data-reveal>
+          <form class="booking-form" id="booking-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+            <div class="form__row form__row--2">
+              <div class="form__field">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+              </div>
+              <div class="form__field">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+              </div>
+            </div>
+            <div class="form__row form__row--2">
+              <div class="form__field">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+              </div>
+              <div class="form__field">
+                <label for="event-type">Event Type</label>
+                <select id="event-type" name="event-type" required>
+                  <option value="">Select an option</option>
+                  <option value="corporate">Corporate Event</option>
+                  <option value="private">Private Party</option>
+                  <option value="wedding">Wedding</option>
+                  <option value="birthday">Birthday</option>
+                  <option value="charity">Charity / Tournament</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form__row form__row--2">
+              <div class="form__field">
+                <label for="event-date">Event Date</label>
+                <input type="date" id="event-date" name="event-date" required>
+              </div>
+              <div class="form__field">
+                <label for="guest-count">Estimated Guest Count</label>
+                <select id="guest-count" name="guest-count" required>
+                  <option value="">Select range</option>
+                  <option value="under-25">Under 25</option>
+                  <option value="25-50">25–50</option>
+                  <option value="50-100">50–100</option>
+                  <option value="100-plus">100+</option>
+                </select>
+              </div>
+            </div>
+            <div class="form__field">
+              <label for="venue">Event Location / Venue</label>
+              <input type="text" id="venue" name="venue" autocomplete="street-address" required>
+            </div>
+            <div class="form__field">
+              <label for="notes">Additional Notes</label>
+              <textarea id="notes" name="notes" rows="4" placeholder="Share timing, theme, or special requests"></textarea>
+            </div>
+            <p class="form__error" id="form-error" role="alert" hidden></p>
+            <button type="submit" class="btn btn--submit" id="form-submit">Submit Inquiry</button>
+          </form>
+
+          <div class="booking-success" id="booking-success" hidden>
+            <div class="booking-success__icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="22" stroke="var(--color-gold)" stroke-width="2"/><path d="M14 24l8 8 12-16" stroke="var(--color-gold-light)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="booking-success__title">Thank You</h3>
+            <p class="booking-success__text">Your message is on its way. A member of our team will reach out shortly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="container site-footer__grid">
+      <div class="site-footer__brand">
+        <span class="logo__text logo__text--footer">Clearpath Golf</span>
+        <p class="site-footer__tagline">Premium mobile simulator experiences — anywhere your guests gather.</p>
+      </div>
+      <div class="site-footer__col">
+        <h3 class="site-footer__heading">Services</h3>
+        <ul class="site-footer__links">
+          <li><a href="#services">Corporate Events</a></li>
+          <li><a href="#services">Weddings</a></li>
+          <li><a href="#services">Private Parties</a></li>
+          <li><a href="#services">Charity &amp; Tournaments</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h3 class="site-footer__heading">Quick Links</h3>
+        <ul class="site-footer__links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#booking">Book Now</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col site-footer__contact">
+        <h3 class="site-footer__heading">Contact</h3>
+        <p><a href="mailto:hello@clearpathgolf.example">hello@clearpathgolf.example</a></p>
+        <p><a href="tel:+15551234567">(555) 123-4567</a></p>
+        <div class="site-footer__social">
+          <a href="https://instagram.com" class="social-link" aria-label="Instagram" rel="noopener noreferrer" target="_blank">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+          <a href="https://facebook.com" class="social-link" aria-label="Facebook" rel="noopener noreferrer" target="_blank">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M14 9h3V6h-3c-2.5 0-4 1.5-4 4v2H8v3h2v7h3v-7h2.5l.5-3H13v-2c0-.8.2-1.3 1.2-1.3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="site-footer__bar">
+      <div class="container site-footer__bar-inner">
+        <p class="site-footer__copy">&copy; <span id="year"></span> Clearpath Golf. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile-only persistent CTA (PROJECT_CONTEXT optional floating bar) -->
+  <a href="#booking" class="mobile-book-bar">Book Now</a>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
